@@ -1,0 +1,8 @@
+{
+    "attributes": {
+        "mybutton": {
+            "context": "div"
+        }
+    },
+    "elements": {}
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" ng-app="usvit">
+    <head>
+        <meta charset="utf-8">
+        <title>Úsvit času</title>
+        <link rel="stylesheet" href="css/main.css"/>
+        <link rel="stylesheet" href="css/content.css"/>
+        <link rel="shortcut icon" href="img/erbs/ico3.ico" />
+    </head>
+    <body>
+        <div id="all">
+            <div id="cont">
+                <div id="top">
+                    <a href="#/">
+                        <div id="logo">
+                            <h1>Úsvit času</h1>
+                            <h2>říjen 2013</h2>
+                        </div>
+                    </a>
+                    <img id="logo_img" src="img/logo2.png" alt="Loga čtyř frakcí"/>
+                </div>
+                <div id="main" class="rounded">
+                    <!--ng-controller="categ"-->
+                    <div id="content" class="rounded">
+<!--                        <div article ng-repeat='article in articles'></div>
+                        <div ng-hide="true">ahoj</div>-->
+                        <div ng-view></div>
+                    </div>
+                    <div id="right" class="rounded">
+                        <div id="filters" ng-include src="'partials/filters.html'"></div>
+                        <hr>
+                        <div id="me" ng-include src="'partials/me.html'"></div>
+                        <hr>
+                        <div id="ucas_list" ng-include src="'partials/ucas_list.html'"></div>
+                    </div>
+                </div>
+                <div id="bottom" class="rounded">
+                    vytvořeno Petrem Hoškem
+                </div>
+            </div>
+        </div>
+        <!--        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+                <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js"></script>
+                <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.min.js"></script>-->
+        <!--<script src="js/lib/angular_min-1.2.16.js"></script>-->
+        <script src="js/lib/angular.js"></script>
+        <script src="js/lib/angular_resource_min-1.2.16.js"></script>
+        <script src="js/lib/angular_route_min-1.2.16.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/directives.js"></script>
+        <script src="js/services.js"></script>
+    </body>
+</html>
