@@ -23,7 +23,7 @@ angular.module('usvit.directives', [])
         return {
             restrict: 'E',
             template: 
-                    '<div ng-class="{filter_button:true,rounded:true,filter_button_active:filter.active == true}" id="mybutton_{{filter.id}}" ng-click="cat_toggle(filter)">{{filter.title}}</div>'
+                    '<div ng-class="{filter_button:true,rounded:true,active:filter.active == true}" id="mybutton_{{filter.id}}" ng-click="cat_toggle(filter)">{{filter.title}}</div>'
                     //'<div ng-class="filter_button rounded {{filter.active?\'filter_button_active\':\'\'}}" id="mybutton_{{filter.id}}" ng-click="toggle(filter)">{{filter.title}}</div>'
             ,
             link:function (scope, element, attr) {
