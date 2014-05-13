@@ -1,0 +1,9 @@
+<div ng-click="uca_toggle(ucastnik)" class=" article rounded item_{{ucastnik.frac}}">
+    {{ucastnik.nick}} <span class="nob">({{ucastnik.name}} {{ucastnik.surname}})</span>
+    <span class="ucastnik icons" ng-hide="ucastnik.active">
+        <img src="./img/erbs/photo.png" alt="Má fotku"/>
+        <img src="./img/erbs/popis.png" alt="Má popis"/>
+        <img src="./img/erbs/popis_gold.png" alt="Má dlouhý popis"/>
+    </span>
+    <div class="ucastnik long_text" ng-show="ucastnik.active">{{ucastnik.gamenick}}<p>{{ucastnik.text}}</p></div>
+</div>

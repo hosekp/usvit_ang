@@ -19,6 +19,25 @@ angular.module('usvit.directives', [])
             }
         };
     })
+    .directive('ucasmain', function() {
+        return {
+            restrict: 'A',
+            templateUrl:"./partials/ucasmain.html",
+            transclude: true,
+            link: function(scope, elem, attrs) {}
+        };
+    })
+    .directive('ucasright', function() {
+        return {
+            restrict: 'A',
+            transclude: true,
+            template:   '<div ng-click="uca_show(ucastnik)" class="{{ucastnik.frac}}">'+
+                            '{{ucastnik.nick}}'+
+                        '</div>'
+            ,
+            link: function(scope, elem, attrs) {}
+        };
+    })
     .directive('mybutton', function() {
         return {
             restrict: 'E',
@@ -37,24 +56,4 @@ angular.module('usvit.directives', [])
             }
         };
     });
-/*
-'<div ng-click="toggle(article)">'+
-                            '<h2>{{article.title}}</h2>'+
-                            '<div class="short_text" ng-if="!article.active">{{article.short}}</div>'+
-                            '<div class="long_text" ng-if="article.active">{{article.long}}</div>'+
-                        '</div>'
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-*/

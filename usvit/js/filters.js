@@ -21,4 +21,4 @@ angular.module('usvit.filters', []).
         return function(item,artID){
             return item.active===artID;
         };
-    });
+    })

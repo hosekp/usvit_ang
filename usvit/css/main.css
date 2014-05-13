@@ -133,3 +133,12 @@ ul{
 .clear{
     clear:left;
 }
+.item_cp{background-color: #ffffff;}
+.item_upiri{background-color: #ffff99;}
+.item_vlkodlaci{background-color: #ff9900;}
+.item_lovci{background-color: #99ffff;}
+.item_rodina{background-color: #66ff66;}
+.item_novinari{background-color: #ff66ff;}
+.nob{
+    font-weight: normal
+}
