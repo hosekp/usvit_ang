@@ -3,82 +3,97 @@
 /* Controllers */
 
 angular.module('usvit.controllers', [])
-  .controller('MyCtrl1', [function() {
-
+  .controller("mainCtrl",["$scope","$routeParams","$PubSub",function($scope,$routeParams,$PubSub){
+        //$scope.isucastnici=($routeParams.categ==="ucastnici");
+        $PubSub.publish("routing",$routeParams);
   }])
-  .controller('MyCtrl2', [function() {
-
-  }])
-//  .controller("categ",["$scope",function($scope){
-//      $scope.articles=window.data.home;
-//  }]);
-  .controller("categ",["$scope","$routeParams","$location",function($scope,$routeParams,$location){
-        $scope.categ=$routeParams.categ;
-        if($scope.categ==="all"){
-            var arts=[];
-            var categs=["important","noviny","forum"];
-            for(var c in categs){
-                arts=arts.concat(window.data[categs[c]]);
-            }
-            //console.log(arts);
-        }else{
-            var arts=window.data[$routeParams.categ];
-        }
-        if($routeParams.artID){
-            for(var i in arts){
-                var art=arts[i];
-                //alert(art.id+"==="+$routeParams.artID);
-                if(art.id===$routeParams.artID){
-                    art.active=true;
-                }else{
-                    art.active=false;
+  .controller("categ",["$scope","$PubSub",function($scope,$PubSub){
+        function registering(routeParams){
+            $scope.categ=routeParams.categ;
+            $scope.artID=routeParams.artID;
+            var arts=window.data;
+            angular.forEach(arts,function(art){
+                art.valid=(art.categ===$scope.categ || ($scope.categ==="all" && art.categ!=="home"));
+            });
+            if($scope.artID){
+                for(var i in arts){
+                    var art=arts[i];
+                    if(art.id===$scope.artID){
+                        art.active=true;
+                    }else{
+                        art.active=false;
+                    }
                 }
+            }else{
+                 for(var i in arts){
+                    var art=arts[i];
+                    art.active=false;
+                }   
             }
-            //$scope.articlesactive=$routeParams.artID;
-        }else{
-             for(var i in arts){
-                var art=arts[i];
-                art.active=false;
-            }   
+            $scope.articles=arts;
         }
-        $scope.categ=$routeParams.categ;
-        $scope.articles=arts;
-        $scope.toggle=function(art){
+        //window.categ=$routeParams.categ;
+        $scope.art_toggle=function(art){
             //art.active=!art.active;
             //$location.path("#/"+$routeParams.categ+"/"+art.id);
             if(art.active){
-                window.location.href = "#/"+$routeParams.categ;
+                window.location.href = "#/"+$scope.categ;
             }else{
-                window.location.href = "#/"+$routeParams.categ+"/"+art.id;
+                window.location.href = "#/"+$scope.categ+"/"+art.id;
             }
         };
+        //######## in-line ############
+        $PubSub.register("routing",registering);
+        var lastpub=$PubSub.last("routing");
+        if(lastpub){
+            registering(lastpub);
+        }
     }])
-    .controller("filters",["$scope","$routeParams","$location",function($scope,$routeParams,$location){
-        $scope.categ=$routeParams.categ;
-        $scope.artID=$routeParams.artID;
+    .controller("filtCtrl",["$scope","$PubSub",function($scope,$PubSub){
         $scope.filters=[
             {id:"all",title:"Vše"},
             {id:"important",title:"Důležité"},
             {id:"noviny",title:"Noviny"},
             {id:"forum",title:"Fórum"}
         ];
-        for(var f in $scope.filters){
+        
+        
+        /*for(var f in $scope.filters){
             var filter=$scope.filters[f];
             if(filter.id===$scope.categ){
                 filter.active=true;
             }else{
                 filter.active=false;
             }
+        }*/
+        function registering(routeParams){
+            $scope.categ=routeParams.categ;
+            $scope.artID=routeParams.artID;
+            for(var f in $scope.filters){
+                var filter=$scope.filters[f];
+                if(filter.id===$scope.categ){
+                    filter.active=true;
+                }else{
+                    filter.active=false;
+                }
+            }
         }
-        $scope.toggle=function(fil){
+        $scope.cat_toggle=function(fil){
             //art.active=!art.active;
             //$location.path("#/"+$routeParams.categ+"/"+art.id);
             //alert("toggle");
             if(fil.active){
-                window.location.href = "#/all";
+                window.location.href = "#/home";
             }else{
                 window.location.href = "#/"+fil.id;
             }
         };
+        //####### in-line ##########
+        $PubSub.register("routing",registering);
+        var lastpub=$PubSub.last("routing");
+        if(lastpub){
+            registering(lastpub);
+        }
+        
         
     }]);

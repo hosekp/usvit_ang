@@ -1,6 +1,7 @@
-<div>
+<div ng-controller="categ">
     <div ng-if='categ==="home"'>
         úsvit času
     </div>
-    <div x-article ng-repeat="article in articles" class='article rounded'></div>
+    Články
+    <div x-article ng-repeat="article in articles | f_categ" class='article rounded'></div>
 </div>

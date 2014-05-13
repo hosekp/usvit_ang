@@ -116,6 +116,10 @@ ul{
     background-color: #dddddd;
     color: #000000;
 }
+.filter_button_active{
+    background-color: #ff5555;
+    color: #000000;
+}
 #right hr{
     clear:left;
     margin-bottom: 5px;
