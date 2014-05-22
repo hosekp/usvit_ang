@@ -2,6 +2,18 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/D:/xampp/htdocs/usvit_ang/usvit/js/directives.js</file>
+            <file>file:/D:/xampp/htdocs/usvit_ang/usvit/partials/right/me.html</file>
+            <file>file:/D:/xampp/htdocs/usvit_ang/usvit/data/articles.json</file>
+            <file>file:/D:/xampp/htdocs/usvit_ang/usvit/js/filters.js</file>
+            <file>file:/D:/xampp/htdocs/usvit_ang/usvit/data/ucastnici.json</file>
+            <file>file:/D:/xampp/htdocs/usvit_ang/usvit/index.html</file>
+            <file>file:/D:/xampp/htdocs/usvit_ang/usvit/js/controllers.js</file>
+            <file>file:/D:/xampp/htdocs/usvit_ang/usvit/js/main.js</file>
+            <file>file:/D:/xampp/htdocs/usvit_ang/usvit/php/download.php</file>
+            <file>file:/D:/xampp/htdocs/usvit_ang/usvit/partials/right/ucas_list.html</file>
+            <file>file:/D:/xampp/htdocs/usvit_ang/usvit/js/services.js</file>
+        </group>
     </open-files>
 </project-private>

@@ -1,4 +1,8 @@
 <div ng-controller="rightCtrl">
+    <div ng-if="prihlasen!==null">
+        <!--<div x-ucasright attribute-ucastnik="{{prihlasen}}">{{ucastnik.nick}}</div>-->
+        <hr>
+    </div>
     <a href="#/ucastnici/all"><div>Účastníci</div></a>
-    <div x-ucasright ng-repeat="ucastnik in ucastnici">{{ucastnik.nick}}</div>
+    <div x-ucasright ng-repeat="ucastnik in ucastnici | filter_uca:prihlasen">{{ucastnik.nick}}</div>
 </div>

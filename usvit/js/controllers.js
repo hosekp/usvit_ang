@@ -4,19 +4,23 @@
 
 angular.module('usvit.controllers', [])
   .controller("mainCtrl",["$scope","$routeParams","$PubSub",function($scope,$routeParams,$PubSub){
-        //$scope.isucastnici=($routeParams.categ==="ucastnici");
+        $scope.isucastnici=false;
         $PubSub.publish("routing",$routeParams);
   }])
   .controller("mainUcaCtrl",["$scope","$routeParams","$PubSub",function($scope,$routeParams,$PubSub){
-        //$scope.isucastnici=($routeParams.categ==="ucastnici");
+        $scope.isucastnici=true;
         $routeParams.categ="ucastnici";
         $PubSub.publish("routing",$routeParams);
   }])
-  .controller("categ",["$scope","$PubSub",function($scope,$PubSub){
-        function registering(routeParams){
-            $scope.categ=routeParams.categ;
-            $scope.artID=routeParams.artID;
-            var arts=window.data.articles;
+  .controller("categ",["$scope","$PubSub","Art",function($scope,$PubSub,Art){
+        var arts=Art.query();
+        arts.$promise.then(function (arts) {
+            $scope.articles=arts;
+            window.data.articles=arts;
+            render();
+        });
+        function render(){
+            var arts=$scope.articles;
             angular.forEach(arts,function(art){
                 art.valid=(art.categ===$scope.categ || ($scope.categ==="all" && art.categ!=="home"));
             });
@@ -24,6 +28,14 @@ angular.module('usvit.controllers', [])
                 for(var i in arts){
                     var art=arts[i];
                     if(art.id===$scope.artID){
+                        if(!art.long){
+                            art.long=Art.detail({ID:art.id});
+//                            Art.detail({ID:art.id}).$promise.then(function(long){
+//                                art.long=long.long;
+//                                art.active=true;
+//                            });
+                        }else{
+                        }
                         art.active=true;
                     }else{
                         art.active=false;
@@ -35,7 +47,11 @@ angular.module('usvit.controllers', [])
                     art.active=false;
                 }   
             }
-            $scope.articles=arts;
+        }
+        function registering(routeParams){
+            $scope.categ=routeParams.categ;
+            $scope.artID=routeParams.artID;
+            render();
         }
         //window.categ=$routeParams.categ;
         $scope.art_toggle=function(art){
@@ -135,6 +151,33 @@ angular.module('usvit.controllers', [])
             url+=uca.frac;
             window.location.href = url+"/"+uca.id;
         };
+        $scope.prihlasen=null;
+        $scope.opened=false;
+        $scope.login=function(lname,lpass){
+            $scope.opened=false;
+            //$scope.prihlasen=getUca(1);
+            $PubSub.publish("login",getUca(12));
+        };
+        $scope.delogin=function(){
+            $PubSub.publish("login",null);
+        };
+        $scope.alert=function(text){
+            alert(text);
+        };
+        $PubSub.register("login",function(uca){
+            $scope.prihlasen=uca;
+        });
+        var lastpub=$PubSub.last("login");
+        if(lastpub){
+            $scope.prihlasen=lastpub;
+        }
+        function getUca(id){
+            var ucas=$scope.ucastnici;
+            for(var i=0;i<ucas.length;i++){
+                if(ucas[i].id===id){return ucas[i];}
+            };
+            return null;
+        }
     }])
     .controller("ucasCtrl",["$scope","$PubSub",function($scope,$PubSub){
         function registering(routeParams){

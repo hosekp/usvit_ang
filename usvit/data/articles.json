@@ -1,0 +1,86 @@
+[
+    {   
+        "id":"art1",
+        "title":"Info 1",
+        "short":"Místo, Dokumenty, S sebou",
+        "long":"<h3>Místo sídel</h3>Sokolovna<ul><li>Lovci + Rodina</li><li>49°52'59.988\"N,16°51'59.355\"E</li></ul>Dvojka<ul><li>Upíři + Vlkodlaci</li><li>49°53'3.561\"N,16°52'10.493\"E</li></ul><h3>Dokumenty:</h3><a href='doc/prihlaska_2013.pdf'>Přihláška</a> a pro hráče mladší 18 let <a href='doc/povoleni_2013.pdf'>potvrzení od rodičů</a><br />         <hr />         <h3>Co s sebou:</h3>         Pokud možno dovézt následující věci:             <ul style='font-weight:normal'>             <li><b>Spacák</b> - spaní zajištěno v nevytápěných prostorách</li>             <li><b>Baterku</b> - hraje se v noci :-)</li><li><b>Mobil</b> - v současnosti jsou mobily nutností</li>             <li><b>CD marker</b> - budete psát na laminované kartičky</li>             <!--<li><b>Peníze</b> - na útratu v baru</li>-->             <li><b>Dobrou náladu</b> :-)</li>             </ul> <hr><h2>Herní doba</h2><ul>             <li>Pátek 20:00 až sobota 4:00</li>             <li>Sobota 10:00 až sobota 20:00 - meziherní doba</li>             <li>Sobota 20:00 až neděle 4:00</li>             <p>Meziherní doba - pro zájemce, je zakázáno nosit zbraně, natož bojovat. Pohyb venku je omezen.</p>         </ul>         <hr />         <br>         <p>Přespání zajištěno v tělocvičně, kde si také můžete nechat věci nepotřebné pro vlastní hru. </p>",
+        "categ":"home"
+    },
+    {   
+        "id":"art0",
+        "title":"Pro koho",
+        "short":"Tento LARP je pro ...",
+        "long":"LARP Úsvit času je svět plný upírů, vlkodlaků a dalších, kde si každý může najít své místo. V tomto LARPu Vás nikdo za ručičku vodit nebude, příležitostí pro splění svých cílů však budete mít více než dost. Můžete shánět peníze vybíráním výpalného, můžete zvyšovat svoji důležitost v rámci celého podsvětí, můžete budovat svoje postavení ve své frakci, můžete se přímo účastnit dění ve městě s dalekosáhlými důsledky nebo si můžete najít svoji vlastní cestu. Podmínkou v cestě, kterou si zvolíte je však vaše aktivita. Pokud chcete čekat, až kvesty přijdou za vámi, radši na tento LARP nejezděte.<br><hr>Frakce supernaturálů (upírů, vlkodlaků, lovců a Rodiny) jsou pro ty, kteří si chtějí užít atmosféru v těchto frakcích a mít pocit nadřazenosti nad obyčejnými lidmi. A pokud vás hraní za postavu neláká vůbec, stále jsou zde bestie s prakticky neomezenou kapacitou.",
+        "categ":"home"
+    },
+    {   
+        "id":"art2",
+        "title":"Organizátoři",
+        "short":"Seznam",
+        "long":"<h3><u>Organizátoři:</u></h3> <h4>Petr Cesťák Hošek</h4> e-mail: ringael@seznam.cz<br /> tel: 603312653   <h4>Pavel Jezevec Herman</h4> e-mail: Jezevec1@centrum.cz<br /> tel: 733347824   <h3><u>Vývojový tým:</u></h3> <h4>Milan Sam Pěkný</h4> e-mail: magytak@seznam.cz   <h4>Ivo Bonhart Nepeřil</h4> e-mail: bonhart@centrum.cz   <h4>Zděněk Tarzan Mlčoch</h4> e-mail: mlcoch.zdenek@seznam.cz",
+        "categ":"home"
+    },
+    {   
+        "id":"art3",
+        "title":"Pravidla",
+        "short":"povídání o psech",
+        "long":"fosdh jkgnsdjk n gbjkas ndbkjs",
+        "categ":"important"
+    },
+    {   
+        "id":"art4",
+        "title":"Bubla nejede",
+        "short":"povídání o kočkách",
+        "long":"fosdh jkgnsdjk n gbjkas ndbkjs",
+        "categ":"noviny"
+    },
+    {   
+        "id":"art5",
+        "title":"Nekrolog Gregorije Kuzněcova",
+        "short":"Poslední zápis v Gregoriově deníku",
+        "long":"<h3>Poslední zápis v Gregoriově deníku:</h3><p> Je podzim 2013, zasraný říjen a brzo bude sněžit. O víkendu se bude makat, nebo chlastat, jako vždycky. A přece je něco špatně. Ve městě se slézají podivné existence. Místní tvrďáci prý skončili ve směsném odpadu, když moc očumovali motorky jakéhosi gangu, který se následně usadil…nu, asi tam, kde chtěli. V kostele zas zevlovala parta divných chlapů, kteří si ani nesundali klobouky…a měli takovej divnej pohled, fuj. Jo a prej se taky bude votvírat nějaký vědecký centrum nebo co, neboť přijela bandu slizounů v oblecích a krmí místní lidi světlou budoucností, něco jako ten…Bill…ne Clinton, ten druhej. A starosta prej leze bez mýdla do zadnice jakýmusi chlapovi, co přijel v autě s Rumunskou vlajkou, ňákej diplomat nebo co, prej z něj mají pěkněj vítr. Vasil zase kecá, určitě projel celou osmičku a viděl i ufouny, jako minule.</p> <p><i>Gregorije Kuzněcova už nikdo nikdy na tahu neviděl, spadlo na něj lešení a nikoho to vlastně netrápilo. Byla spousta jiných důvodů, proč místní na víkend už nikdy nezapomněli…</i></p>",
+        "categ":"noviny"
+    },
+    {   
+        "id":"art6",
+        "title":"Bubla se ožere",
+        "short":"povídání o plazechh",
+        "long":"fosdh jkgnsdjk n gbjkas ndbkjs",
+        "categ":"noviny"
+    },
+    {   
+        "id":"art7",
+        "title":"Sbírka questových předmětů",
+        "short":"více ve fóru",
+        "long":"XXXXXXXXX",
+        "categ":"actual"
+    },
+    {   
+        "id":"art8",
+        "title":"Posunutí termínu akce",
+        "short":"o dva týdny dozadu",
+        "long":"XXXXXXXXX",
+        "categ":"actual"
+    },
+    {   
+        "id":"art9",
+        "title":"Registace běží",
+        "short":"Zatím bez omezení",
+        "long":"Počet registrovaných za tím není omezen, ale pro skutečné přijmutí do frakce je potřeba schválení vůdcem frakce. Maximální počet schválených lidí ve frakci je omezen, ale může se zvýšit až na 15 při rovnoměrném zaplňování ostatních frakcí. ",
+        "categ":"actual"
+    },
+    {   
+        "id":"art10",
+        "title":"Výběrové řízení na vůdce",
+        "short":"",
+        "long":"Zájemci o pozici vůdce frakce, hlaste se.",
+        "categ":"actual"
+    },
+    {   
+        "id":"art11",
+        "title":"Fórum funguje",
+        "short":"I pro jednotlivé frakce",
+        "long":"Je možné tvořit témata pouze pro určitou frakci, takže jestli chcete něco napsat svým spolubojovníkům, Fórum je právě pro vás. ",
+        "categ":"actual"
+    }
+]

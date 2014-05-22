@@ -1,2 +1,17 @@
-<div class="filter_button rounded">All</div>
-<div class="filter_button rounded">Důležité</div>
+<div ng-controller="rightCtrl">
+    <div ng-hide="prihlasen || opened">
+        <div class="filter_button rounded" ng-click="opened = true;">Přihlásit</div>
+        <div class="filter_button rounded" ng-click="alert('not implemented');">Registrovat</div>
+    </div>
+    <div ng-hide="!opened">
+        E-mail:
+        <input ng-model="lname" type="email">
+        Heslo:
+        <input ng-model="lpass" type="password">
+        <div class="filter_button rounded" ng-click="login(lname, lpass);">Přihlásit</div>
+    </div>
+    <div ng-hide="!prihlasen">
+        <div class="filter_button rounded" ng-click="delogin()">Odhlásit</div>
+        <div class="filter_button rounded" ng-click="alert('not implemented');">Změna údajů</div>
+    </div>
+</div>

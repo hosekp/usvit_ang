@@ -1,7 +1,11 @@
-<div ng-controller="categ">
+<div ng-if="!isucastnici" ng-controller="categ">
     <div ng-if='categ==="home"'>
-        úsvit času
-    </div>
+        <h2>Městský LARP Úsvit času</h2><h2>Kdy, kde a za kolik</h2> Datum: 18.- 20.10.2013 <br />Místo: město Zábřeh <br />Čas: 20:00 (začátek hry) <br />Cena (při platbě předem):     200Kč hráči,    100Kč bestie <br /> <h2>Pro koho</h2>         <p>LARP Úsvit času je svět plný upírů, vlkodlaků a dalších, kde si každý může najít své místo. V tomto LARPu Vás nikdo za ručičku vodit nebude, příležitostí pro splění svých cílů však budete mít více než dost. Můžete shánět peníze vybíráním výpalného, můžete zvyšovat svoji důležitost v rámci celého podsvětí, můžete budovat svoje postavení ve své frakci, můžete se přímo účastnit dění ve městě s dalekosáhlými důsledky nebo si můžete najít svoji vlastní cestu. Podmínkou v cestě, kterou si zvolíte je však vaše aktivita. Pokud chcete čekat, až kvesty přijdou za vámi, radši na tento LARP nejezděte. </p>         <p>Frakce supernaturálů (upírů, vlkodlaků, lovců a Rodiny) jsou pro ty, kteří si chtějí užít atmosféru v těchto frakcích a mít pocit nadřazenosti nad obyčejnými lidmi. A pokud vás hraní za postavu neláká vůbec, stále jsou zde bestie s prakticky neomezenou kapacitou.</p>
+        </div>
     Články
     <div x-article ng-repeat="article in articles | f_categ" class='article rounded'></div>
+</div>
+<div ng-if="isucastnici" ng-controller="ucasCtrl">
+    Účastníci
+    <div x-ucasmain ng-show="ucastnik.valid" ng-repeat="ucastnik in ucastnici">{{ucastnik.nick}}</div>
 </div>

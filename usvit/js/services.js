@@ -2,7 +2,27 @@
 
 
 
-angular.module("usvit.services",[]).service('$PubSub', function() {
+angular.module("usvit.services",['ngResource'])
+
+.factory('Uca', ['$resource',
+    function($resource){
+        return $resource('./php/download.php', {categ:"uca"}, {
+        //get:{method:'GET',params:{}},
+        query: {method:'GET', params:{type:"query"}, isArray:true},
+        list: {method:'GET', params:{type:"list"}, isArray:true},
+        detail:{method:'GET', params:{type:"detail"}}
+    });
+}])
+.factory('Art', ['$resource',
+    function($resource){
+        return $resource('./php/download.php', {categ:"art"}, {
+        //get:{method:'GET',params:{}},
+        query: {method:'GET', params:{type:"query"}, isArray:true},
+        detail:{method:'GET', params:{type:"detail"}}
+    });
+}])
+
+.service('$PubSub', function() {
   var subscribers = {};
   var lastPublished = {};
   this.register = function(topic, callback) {
@@ -25,4 +45,8 @@ angular.module("usvit.services",[]).service('$PubSub', function() {
       callback(message);
     });
   };
-});
+})
+//.service('$sanitHTML',["$sce",function($sce) {
+//    
+//}])
+;

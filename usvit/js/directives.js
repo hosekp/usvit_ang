@@ -10,7 +10,7 @@ angular.module('usvit.directives', [])
             template:   '<div ng-click="art_toggle(article)">'+
                             '<h2>{{article.title}}</h2>'+
                             '<div class="short_text animate-show" ng-hide="article.active">{{article.short}}</div>'+
-                            '<div class="long_text animate-show" ng-show="article.active">{{article.long}}</div>'+
+                            '<div class="long_text animate-show" ng-show="article.active" ng-bind-html="article.long | sanitize"></div>'+
                         '</div>'
             ,
             link: function(scope, elem, attrs) {
